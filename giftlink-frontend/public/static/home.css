@@ -1,19 +1,75 @@
 /* Task 1: Style the body */
 body {
-    /* insert code here */
+    font-family: 'Montserrat', sans-serif;
+    margin: 0;
+    padding: 0;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    background-color: #f4f4f4;
 }
 
 /* Task 2: Create a pseudo-element for the background and blur */
 body::before {
-    /* insert code here */
+    content: "";
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: url('your-image-url.jpg') no-repeat center center/cover;
+    filter: blur(8px);
+    z-index: -1; /* ensures the background stays behind other content */
 }
 
 /* Task 3: Style the content area */
 .content {
-    /* insert code here */
+    position: relative;          /* Position relative to allow z-index */
+    z-index: 10;                 /* Ensure it's above the background */
+    text-align: center;          /* Align text to center (adjust as needed) */
+    color: #ffffff;              /* Text color (white for readability) */
+    max-width: 800px;            /* Maximum width to constrain content */
+    padding: 20px;               /* Padding for spacing inside the box */
+    background: rgba(0, 0, 0, 0.6); /* Semi-transparent background for readability */
 }
 
 /* Task 4: Add styles for headings, paragraphs, and buttons */
-h1, h2, .lead, .btn-primary {
-    /* insert code here */
+/* Customize h1 and h2 */
+h1 {
+    font-size: 2.5rem;  /* Larger font size */
+    font-weight: 700;   /* Bold */
+    color: #333333;     /* Dark gray color */
+}
+
+h2 {
+    font-size: 2rem;
+    font-weight: 600;
+    color: #555555;
+    max-width: 600px;   /* Restrict max width */
+}
+
+/* Style .lead for the quote */
+.lead {
+    font-size: 1.25rem;
+    font-style: italic;
+    color: #666666;
+    margin-bottom: 1rem;
+}
+
+/* Adjust .btn-primary for the button */
+.btn-primary {
+    background-color: #007bff; /* Bootstrap primary blue */
+    color: white;
+    padding: 0.5rem 1rem;
+    border: none;
+    border-radius: 0.25rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.btn-primary:hover {
+    background-color: #0056b3; /* Darker blue on hover */
 }
