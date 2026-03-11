@@ -92,7 +92,6 @@ return (
                             <div className="no-image-available-large">No Image Available</div>
                         )}
                     </div>
-                    // Task 6: Display gift details
                     	<p><strong>Category:</strong> 
 				gift.Category
 			</p>
