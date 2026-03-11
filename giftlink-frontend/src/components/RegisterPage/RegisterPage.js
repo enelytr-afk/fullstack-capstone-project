@@ -41,9 +41,6 @@ function RegisterPage() {
                 navigate('/app');
             }
 
-            if (json.error) {
-                setShowerr(json.error);
-            }
 
             }catch (e) {
               console.log("Error fetching details: " + e.message);
